@@ -1,0 +1,251 @@
+@import url('base.css');
+@import url('public.css');
+@import url('menu_icon.css');
+
+body {
+  overflow: hidden;
+  color:#fff;
+  font-size: 16px;
+  font-family: Times;
+  line-height: 1.5;
+  background: #212121;
+  -webkit-font-smoothing: antialiased;
+  background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #75517d, #1b2947);
+  background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+  background-attachment: fixed;
+} 
+
+.inner {
+  position: relative;
+  max-width: 640px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+#header_banner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 130px;
+  right: 130px;
+  z-index: 10;
+  padding: 40px 10px 10px 10px;
+  background: url('../pic/snow.png') no-repeat ;
+}
+
+.nav ul{
+  padding-left: 15px;
+}
+
+.nav li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style:none;
+}
+
+.nav li a{
+  text-decoration: none;
+  color: #808080;
+}
+
+.nav li a:hover {
+  color: #fff;
+}
+
+.nav .active>a {
+  color: #fff;
+}
+
+#pattern {
+  top: 12%; 
+  left: 42%; 
+  position: absolute;
+  animation:curtainEffect 1s;
+  -moz-animation: curtainEffect 1s;
+  -webkit-animation: curtainEffect 1s; 
+  -o-animation: curtainEffect 1s; 
+}
+
+@keyframes curtainEffect{
+  from { top:0px; opacity:0;}
+  to { top:12%; opacity:1;}
+}
+
+@-moz-keyframes curtainEffect {
+  from { top:0px; opacity:0;}
+  to { top:12%; opacity:1;}
+}
+
+@-webkit-keyframes curtainEffect{
+  from { top:0px; opacity:0;}
+  to { top:12%; opacity:1;}
+}
+
+@-o-keyframes curtainEffect{
+  from { top:0px; opacity:0;}
+  to { top:12%; opacity:1;}
+}
+
+@font-face {
+  font-family: 'sacramentoregular';
+  src: url('../font/sacramento-regular-webfont.eot');
+  src: url('../font/sacramento-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/sacramento-regular-webfont.woff2') format('woff2'),
+       url('../font/sacramento-regular-webfont.woff') format('woff'),
+       url('../font/sacramento-regular-webfont.ttf') format('truetype'),
+       url('../font/sacramento-regular-webfont.svg#sacramentoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1#regard {
+  font-size: 4em;
+  font-weight: 100;
+  text-align: center;
+  font-family: 'sacramentoregular';
+}
+
+hr.double {
+  float:left;
+  padding:3px 0px 0px;
+  width:172px;
+  border:none;
+  border-top:3px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#line {
+  float:left;
+  width:285px;
+  padding:0px 5px 0px;
+}
+
+.left {
+  display:inline;
+  float: left;
+}
+
+#poetry {
+  font-family: 'Calligraph421 BT', Times;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.ribbon {
+  margin:210px 170px 0px;
+  line-height:40px;
+  position:relative;
+  padding:0 40px;
+  float:left;
+}
+
+.ribbon a span {
+  background-color: #DD374A;
+  _display: block;
+  float: left;
+  height: 40px;
+  position: relative;
+  top: -6px;
+  padding: 0 13px;
+  font-size: 1.625em;
+  font-family: Times;
+  color: #fff;
+}
+
+.ribbon a i, .ribbon a b {
+  position: absolute;
+  border: 3px solid #fff;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  bottom: -6px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.ribbon a i {
+  left:0;
+  border-color:#D9D8D8 #D9D8D8 #932431 #932431;
+}
+
+.ribbon a b {
+  right:0;
+  border-color:#D9D8D8 #D9D8D8 rgba(0,0,0,0) rgba(0,0,0,0);
+}
+
+.ribbon-l {
+  border: 20px solid #932431;
+  border-left-color: rgba(0,0,0,0);
+  position: absolute;
+  line-height: 0;
+  left: 0;
+  top: 0;
+}
+.ribbon-r {
+  border-left-color: #932431;
+  border-right-color: rgba(0,0,0,0);
+  right: 0;
+  left: auto;
+}
+
+.footer {
+  background: url(../pic/footer.png) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
+  height: 188px;
+}
+
+#move {
+  height: 100px;
+  width: 156px;
+  left: 75%;
+  bottom: 28%;
+  position: absolute;
+  background-image: url(../pic/prince_1.png);  
+  -moz-animation: mymove 3s infinite;
+  -webkit-animation: mymove 3s infinite; 
+  -o-animation: mymove 3s infinite; 
+}
+
+@media screen and (min-width: 1370px) {#move{left: 70%;}}
+
+@keyframes mymove {
+  0% {opacity: 1;background-image:url(../pic/prince_1.png);}
+  32% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  48% {opacity: 1;background-image:url(../pic/prince_3.png);}  
+  64% {opacity: 1;background-image:url(../pic/prince_3.png);}
+  80% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  100% {opacity: 1;background-image:url(../pic/prince_1.png);}
+}
+
+@-moz-keyframes mymove {
+  0% {opacity: 1;background-image:url(../pic/prince_1.png);}
+  32% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  48% {opacity: 1;background-image:url(../pic/prince_3.png);}  
+  64% {opacity: 1;background-image:url(../pic/prince_3.png);}
+  80% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  100% {opacity: 1;background-image:url(../pic/prince_1.png);}
+}
+
+@-webkit-keyframes mymove {
+  0% {opacity: 1;background-image:url(../pic/prince_1.png);}
+  32% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  48% {opacity: 1;background-image:url(../pic/prince_3.png);}  
+  64% {opacity: 1;background-image:url(../pic/prince_3.png);}
+  80% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  100% {opacity: 1;background-image:url(../pic/prince_1.png);}
+}
+
+@-o-keyframes mymove {
+  0% {opacity: 1;background-image:url(../pic/prince_1.png);}
+  32% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  48% {opacity: 1;background-image:url(../pic/prince_3.png);}  
+  64% {opacity: 1;background-image:url(../pic/prince_3.png);}
+  80% {opacity: 1;background-image:url(../pic/prince_2.png);}
+  100% {opacity: 1;background-image:url(../pic/prince_1.png);}
+}
