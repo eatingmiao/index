@@ -64,8 +64,8 @@
     });
 
     $(".back, .icon-cancel").bind('click',function () {
-      $(".back").css("display","none");
       $(".contact").fadeOut("fast");
+      $(".back").css("display","none");
     });
 
   }); 
@@ -119,6 +119,11 @@
     if (!$(".history").length) {
       return;
     }
+    
+    var date = new Date();
+    var nowYear = date.getFullYear();
+    document.getElementById("now").innerHTML = nowYear;
+
     var $warpEle = $(".history-date"),
       $targetA = $warpEle.find("h2 a, ul li dl dt i"),
       parentH,
